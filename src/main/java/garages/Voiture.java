@@ -93,14 +93,12 @@ public class Voiture {
 	public void imprimeStationnements(PrintStream out) {
 		// TODO: Implémenter cette méthode
 		garagesVisites().forEach(g -> {
-                System.out.println(g);
+                System.out.println(g.toString() + " :"); 
                 
                     myStationnements.forEach(s -> {
                         if (g.equals(s.getGarage())){
-                            System.out.println( "       Stationnement{ entrée=" + s.getEntree() + 
-                                    ", sortie=" + s.getFin() + "}");
-                        } else {
-                        }
+                            System.out.println("        " + s.toString());
+                        } 
                     });    
             });
             
