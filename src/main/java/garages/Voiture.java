@@ -7,7 +7,7 @@ public class Voiture {
 
 	private final String immatriculation;
 	private final List<Stationnement> myStationnements = new LinkedList<>();
-        private final Set<Garage> myGarages = new HashSet<Garage>();
+        private final Set<Garage> myGarages = new HashSet<>();
 
 	public Voiture(String i) {
 		if (null == i) {
@@ -93,8 +93,7 @@ public class Voiture {
 	public void imprimeStationnements(PrintStream out) {
 		// TODO: Implémenter cette méthode
 		garagesVisites().forEach(g -> {
-                System.out.println(g.toString() + " :"); 
-                
+                    System.out.println(g.toString() + " :"); 
                     myStationnements.forEach(s -> {
                         if (g.equals(s.getGarage())){
                             System.out.println("        " + s.toString());
